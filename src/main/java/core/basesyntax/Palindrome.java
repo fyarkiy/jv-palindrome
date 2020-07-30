@@ -22,8 +22,7 @@ public class Palindrome {
      */
     public boolean isPalindrome(String text) {
         text = text.toLowerCase().replaceAll("[^a-z0-9]", "");
-        StringBuilder reversedText = new StringBuilder();
-        reversedText.append(text).reverse();
+        StringBuilder reversedText = new StringBuilder(text).reverse();
         return text.equals(reversedText.toString());
     }
 }
